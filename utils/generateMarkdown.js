@@ -46,7 +46,11 @@ ${data.Tests}
 ${data.Questions}
 * GitHub: ${data.Github}
 * Email: ${data.Email}
+
 `;
 }
 
+
 module.exports = generateMarkdown;
+
+generateMarkdown()

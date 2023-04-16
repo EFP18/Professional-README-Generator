@@ -6,9 +6,8 @@ const generateMarkdown = require('./utils/generateMarkdown');
 // Inquirer used to generate questions
 const questions = [{
   type: 'input',
-  name: 'Project Title',
+  name: 'Title',
   message: 'What is the title of your README file?', 
-  default: 'Project Title',
   // validate that the user has given an input for the non-optional questions
   // validate: (value) => {if(value){return true;} else {return ('Please add a project title.')}}
 },
@@ -16,7 +15,6 @@ const questions = [{
   type: 'input',
   name: 'Description',
   message: 'Write a description for your repository.', 
-  default: 'Description',
   // validate: (value) => {if(value){return true;} else {return ('Please add a project title.')}}
 },
 {
@@ -30,14 +28,12 @@ const questions = [{
   type: 'input',
   name: 'Installation',
   message: 'What are the installation instructions for your project?',
-  default: 'Installation', 
   // validate: (value) => {if(value){return true;} else {return ('Please add a project title.')}}
 },
 {
   type: 'input',
   name: 'Usage',
   message: 'What is the usage of your repository?', 
-  default: 'Usage',
 },
 {
   // list of licenses
@@ -45,7 +41,6 @@ const questions = [{
   name: 'License',
   message: 'What license(s) does your repository have?', 
   choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
-  default: 'MIT License',
   // explanation for each license??
   // list of licenses
   // license badge at the top
@@ -55,28 +50,25 @@ const questions = [{
   type: 'input',
   name: 'Contributing',
   message: 'How can someone contribute to your repository?', 
-  default: 'Contributing',
 },
 {
   type: 'input',
   name: 'Tests',
   message: '???', 
-  default: 'Tests',
 },
 {
   type: 'input',
   name: 'GitHub',
   message: 'What is your GitHub profile?', 
-  default: 'Questions',
   // validate: (value) => {if(value){return true;} else {return 'Please add a project title.'}}
 },
 {
   type: 'input',
   name: 'Email',
   message: 'What is your email address?', 
-  default: 'Questions',
 // how to add multiple questions 
 }];
+
 
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
