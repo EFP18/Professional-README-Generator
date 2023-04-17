@@ -1,5 +1,8 @@
 # e
-  [![License](https://img.shields.io/badge/license-GNU AGPLv3-blue.svg)
+  [![License](https://img.shields.io/badge/license-GNU-AGPLv3-blue.svg)
+
+  undefined
+
 
   * [Description](#description)
   * [Installation](#installation)
@@ -19,15 +22,14 @@ e
 e
 
 ## License
-GNU AGPLv3
+GNU-AGPLv3
 
 ## Contributing
 e
 
-## Tests
-e
+
 
 ## Questions
-* GitHub: http://github.com/hello
-* Email: ester.p18@hotmail.com
+* GitHub: http://github.com/e
+* Email: 
 

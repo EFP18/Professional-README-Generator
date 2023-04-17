@@ -33,7 +33,10 @@ const questions = [{
   type: 'list',
   name: 'License',
   message: 'What license(s) does your repository have?', 
-  choices: ['GNU AGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT', 'Boost Software License 1.0', 'The Unlicense'],
+  choices: [{
+    name: 'GNU AGPLv3',
+    value: "GNU-AGPLv3"
+  }, 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT', 'Boost Software License 1.0', 'The Unlicense'],
 },
 {
   type: 'input',
