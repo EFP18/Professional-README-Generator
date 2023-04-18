@@ -1,27 +1,26 @@
 //Generate license badge 
 function renderLicenseBadge(License) {
   if (!License) return '';
-  return `[![License](https://img.shields.io/badge/license-${License}-blue.svg)`
-  if (License === 'GNU AGPLv3') {
-    return `[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)`
-  }
-
+  return `![License](https://img.shields.io/badge/License-${License}.svg)`
+  // if (License === 'GNU AGPLv3') {
+  //   return `[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)`
+  // }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(License) {
-  if (License === 'GNU AGPLv3') {
+  if (License === 'AGPL_v3-blue') {
     return `https://www.gnu.org/licenses/agpl-3.0`
-  } else if (License ==='Mozilla Public License 2.0') {
+  } else if (License ==='MPL_2.0-brightgreen') {
     return `https://opensource.org/licenses/MPL-2.0`
-  } else if (License ==='The Unlicense') {
+  } else if (License ==='Unlicense-blue') {
     return `http://unlicense.org/` 
-  } else if (License ==='Apache License 2.0') {
+  } else if (License ==='Apache_2.0-blue') {
     return `https://opensource.org/licenses/Apache-2.0` 
   } else if (License ==='MIT') {
     return `https://opensource.org/licenses/MIT` 
-  } else if (License ==='Boost Software License 1.0') {
+  } else if (License ==='Boost_1.0-lightblue') {
     return `https://www.boost.org/LICENSE_1_0.txt` 
   }
   
@@ -36,42 +35,79 @@ function renderLicenseSection(License) {}
 function generateMarkdown(data) {
   return `# ${data.Title}
   ${renderLicenseBadge(data.License)}\n
-  ${renderLicenseLink(data.License)}
+  ${renderLicenseLink(data.License)}\n
 
+  ##Table of Contents
 
   * [Description](#description)
   * [Installation](#installation)
-  * [Usage](#usage)
-  * [License](#license)
-  * [Contributing](#contributing)
-  * [Tests](#tests)
+  ${
+    data.Usage ? 
+    `* [Usage](#usage)
+    ` 
+    : ''
+  }
+  ${
+    data.License ? 
+    `* [License](#license)
+    ` 
+    : ''
+  }
+  ${
+    data.Contributing ? 
+    `* [Contributing](#contributing)
+    ` 
+    : ''
+  }
+  ${
+    data.Tests ? 
+    `* [Tests](#tests)
+    ` 
+    : ''
+  }
   * [Questions](#questions)
 
-## Description
+### Description
 ${data.Description}
 
-## Installation
+### Installation
 ${data.Installation}
 
-## Usage
-${data.Usage}
+${
+  data.Usage ? 
+  `### Usage
+  ${data.Usage}` 
+  : ''
+}
 
-## License
-${data.License}
+${
+  data.License ? 
+  `### License
+  ${data.License}` 
+  : ''
+}
 
-## Contributing
-${data.Contributing}
+${
+  data.Contributing ? 
+  `### Contributing
+  ${data.Contributing}` 
+  : ''
+}
 
 ${
   data.Tests ? 
-  `## Tests
+  `### Tests
   ${data.Tests}` 
   : ''
 }
 
-## Questions
+### Questions
 * GitHub: http://github.com/${data.GitHub}
-* Email: ${data.Email}
+${
+  data.Email ?
+  `*Email: ${data.Email}`
+  : ''
+}
 
 `;
 }

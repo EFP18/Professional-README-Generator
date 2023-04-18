@@ -35,8 +35,28 @@ const questions = [{
   message: 'What license(s) does your repository have?', 
   choices: [{
     name: 'GNU AGPLv3',
-    value: "GNU-AGPLv3"
-  }, 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT', 'Boost Software License 1.0', 'The Unlicense'],
+    value: 'AGPL_v3-blue'
+  },
+  {
+    name: 'Mozilla Public License 2.0',
+    value: 'MPL_2.0-brightgreen'
+  }, 
+  {
+    name: 'Apache License 2.0',
+    value: 'Apache_2.0-blue'
+  }, 
+  {
+    name: 'MIT',
+    value: 'MIT'
+  }, 
+  {
+    name: 'Boost Software License 1.0',
+    value: 'Boost_1.0-lightblue'
+  }, 
+  {
+    name: 'The Unlicense',
+    value: 'Unlicense-blue'
+  }]
 },
 {
   type: 'input',
@@ -62,24 +82,14 @@ const questions = [{
 
 
 const askUserAndCreateReadme = () => {
-
-    inquirer.prompt(questions).then((data, err) => {
-      console.log(data);
-      if (err) throw err;
-      // create the readme file
-      fs.writeFileSync('README-autoCreated.md', generateMarkdown(data));
-      console.log('Your README file is ready!');
-    });
-
+// take data from inquirer
+  inquirer.prompt(questions).then((data, err) => {
+    console.log(data);
+    // create the readme file
+    fs.writeFile('README-autoCreated.md', generateMarkdown(data), (err) =>
+      err ? console.error(err) : console.log('Your README file is ready!')
+    );
+  });
 }
 
 askUserAndCreateReadme()
-
-
-
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
-

@@ -1,35 +1,40 @@
 # e
-  [![License](https://img.shields.io/badge/license-GNU-AGPLv3-blue.svg)
+  ![License](https://img.shields.io/badge/License-AGPL_v3-blue.svg)
 
-  undefined
+  https://www.gnu.org/licenses/agpl-3.0
 
+
+  ##Table of Contents
 
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
+    
   * [License](#license)
+    
   * [Contributing](#contributing)
-  * [Tests](#tests)
+    
+  
   * [Questions](#questions)
 
-## Description
+### Description
 e
 
-## Installation
+### Installation
 e
 
-## Usage
-e
+### Usage
+  e
 
-## License
-GNU-AGPLv3
+### License
+  AGPL_v3-blue
 
-## Contributing
-e
+### Contributing
+  e
 
 
 
-## Questions
+### Questions
 * GitHub: http://github.com/e
-* Email: 
+
 
