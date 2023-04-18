@@ -22,6 +22,8 @@ function renderLicenseLink(License) {
     return `https://opensource.org/licenses/MIT` 
   } else if (License ==='Boost_1.0-lightblue') {
     return `https://www.boost.org/LICENSE_1_0.txt` 
+  } else if (License ==='') {
+    return `` 
   }
   
 }
@@ -32,12 +34,14 @@ function renderLicenseSection(License) {}
 
 // readme template and format
 // call of license badge and link
+// code checks to see what fields have been answered and which ones haven't
+
 function generateMarkdown(data) {
   return `# ${data.Title}
   ${renderLicenseBadge(data.License)}\n
   ${renderLicenseLink(data.License)}\n
 
-  ##Table of Contents
+  ## Table of Contents
 
   * [Description](#description)
   * [Installation](#installation)
@@ -66,6 +70,7 @@ function generateMarkdown(data) {
     : ''
   }
   * [Questions](#questions)
+
 
 ### Description
 ${data.Description}
@@ -105,10 +110,9 @@ ${
 * GitHub: http://github.com/${data.GitHub}
 ${
   data.Email ?
-  `*Email: ${data.Email}`
+  `* Email: ${data.Email}`
   : ''
 }
-
 `;
 }
 

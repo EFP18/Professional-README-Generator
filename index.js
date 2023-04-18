@@ -56,6 +56,10 @@ const questions = [{
   {
     name: 'The Unlicense',
     value: 'Unlicense-blue'
+  }, 
+  {
+    name: 'My repository has no license.',
+    value: ''
   }]
 },
 {
