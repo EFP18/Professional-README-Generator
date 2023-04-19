@@ -15,13 +15,13 @@ const questions = [{
   type: 'input',
   name: 'Description',
   message: 'Write a description for your repository.', 
-  validate: (value) => {if(value){return true;} else {return ('Please add a project title.')}}
+  validate: (value) => {if(value){return true;} else {return ('Please add a description for your project.')}}
 },
 {
   type: 'input',
   name: 'Installation',
   message: 'What are the installation instructions for your project?',
-  validate: (value) => {if(value){return true;} else {return ('Please add a project title.')}}
+  validate: (value) => {if(value){return true;} else {return ('Please add some installation instructions.')}}
 },
 {
   type: 'input',
@@ -76,7 +76,7 @@ const questions = [{
   type: 'input',
   name: 'GitHub',
   message: 'What is your GitHub profile?', 
-  validate: (value) => {if(value){return true;} else {return 'Please add a project title.'}}
+  validate: (value) => {if(value){return true;} else {return 'Please add a link to your GitHub profile.'}}
 },
 {
   type: 'input',
