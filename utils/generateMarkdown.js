@@ -1,13 +1,22 @@
+// create license object to get the name of the licenses to appear in the license section
+const licensesObj = {
+  'AGPL_v3-blue': 'GNU AGPLv3',
+  'MPL_2.0-brightgreen': 'Mozilla Public License 2.0',
+  'Apache_2.0-blue': 'Apache License 2.0',
+  'MIT': 'MIT',
+  'Boost_1.0-lightblue': 'Boost Software License 1.0',
+  'Unlicense-blue': 'The Unlicense'
+}
+
+
 //Generate license badge 
 function renderLicenseBadge(License) {
   if (!License) return '';
   return `![License](https://img.shields.io/badge/License-${License}.svg)`
-  // if (License === 'GNU AGPLv3') {
-  //   return `[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)`
-  // }
+
 }
 
-// TODO: Create a function that returns the license link
+// function to show the link for the license chosen
 // If there is no license, return an empty string
 function renderLicenseLink(License) {
   if (License === 'AGPL_v3-blue') {
@@ -27,10 +36,6 @@ function renderLicenseLink(License) {
   }
   
 }
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(License) {}
 
 // readme template and format
 // call of license badge and link
@@ -72,48 +77,48 @@ function generateMarkdown(data) {
   * [Questions](#questions)
 
 
-### Description
-${data.Description}
+  ### Description
+  ${data.Description}
 
-### Installation
-${data.Installation}
+  ### Installation
+  ${data.Installation}
 
-${
-  data.Usage ? 
-  `### Usage
-  ${data.Usage}` 
-  : ''
-}
+  ${
+    data.Usage ? 
+    `### Usage
+    ${data.Usage}` 
+    : ''
+  }
 
-${
-  data.License ? 
-  `### License
-  ${data.License}` 
-  : ''
-}
+  ${
+    data.License ? 
+    `### License
+    ${licensesObj[data.License]}` 
+    : ''
+  }
 
-${
-  data.Contributing ? 
-  `### Contributing
-  ${data.Contributing}` 
-  : ''
-}
+  ${
+    data.Contributing ? 
+    `### Contributing
+    ${data.Contributing}` 
+    : ''
+  }
 
-${
-  data.Tests ? 
-  `### Tests
-  ${data.Tests}` 
-  : ''
-}
+  ${
+    data.Tests ? 
+    `### Tests
+    ${data.Tests}` 
+    : ''
+  }
 
-### Questions
-* GitHub: http://github.com/${data.GitHub}
-${
-  data.Email ?
-  `* Email: ${data.Email}`
-  : ''
-}
-`;
+  ### Questions
+  * GitHub: http://github.com/${data.GitHub}
+  ${
+    data.Email ?
+    `* Email: ${data.Email}`
+    : ''
+  }
+  `;
 }
 
 

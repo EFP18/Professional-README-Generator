@@ -1,5 +1,9 @@
 # Professional README Generator
 
+Example video of functionality: https://drive.google.com/file/d/1lb4fJH13DSwjOLlf2L5HMMAh5V9oTvQJ/view
+GitHub: https://github.com/EFP18/Professional-README-Generator
+Please refer to the other README file titled README-autoCreated.md for an example file generated using the application. 
+
 ## Table of Contents
 
   * [Description](#description)
@@ -20,49 +24,4 @@ This repository can be used to create a README generator automatically, by just 
 ### Questions
 * GitHub: http://github.com/https://github.com/EFP18
 * Email: ester.p18@hotmail.com
-
-Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality. Revisit the Screencastify Tutorial in the prework as a refresher on how to record video from your computer. You’ll need to submit a link to the video _and_ add it to the README of your project.
-
-
-
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-
-
-* Include a video of the typical user flow through your application. This includes views of the prompts and the responses after their selection.
-
-* Refer to the [Fullstack Blog Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) for additional guidance on creating a video.
-
- 
-
-### Deliverables: 20%
-
-* A sample README generated using the application must be submitted.
-
-* Your GitHub repository containing your application code.
-
-### Walkthrough Video: 27%
-
-* A walkthrough video that demonstrates the functionality of the README generator must be submitted, and a link to the video should be included in your README file.
-
-* The walkthrough video must demonstrate how a user would invoke the application from the command line.
-
-* The walkthrough video must demonstrate how a user would enter responses to all of the prompts in the application.
-
-* The walkthrough video must demonstrate a generated README that matches the user input and has a functioning table of contents.
-
-
-
-## Review
-
-You are required to submit the following for review:
-
-* A walkthrough video demonstrating the functionality of the application.
-
-* A sample README.md file for a project repository generated using your application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-
-
 
