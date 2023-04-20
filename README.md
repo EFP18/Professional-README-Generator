@@ -1,7 +1,9 @@
 # Professional README Generator
 
 Example video of functionality: https://drive.google.com/file/d/1lb4fJH13DSwjOLlf2L5HMMAh5V9oTvQJ/view
+
 GitHub: https://github.com/EFP18/Professional-README-Generator
+
 Please refer to the other README file titled README-autoCreated.md for an example file generated using the application. 
 
 ## Table of Contents
